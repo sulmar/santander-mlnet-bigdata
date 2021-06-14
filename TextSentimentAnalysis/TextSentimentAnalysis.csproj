@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="wikipedia-detox-250-line-data.tsv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
