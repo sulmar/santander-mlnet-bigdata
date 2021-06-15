@@ -22,7 +22,23 @@ namespace GitHubIssues
             var context = new MLContext();
 
             // 2. Load data
-            IDataView dataView = context.Data.LoadFromTextFile<GitHubIssue>(filename, hasHeader: true);
+            // IDataView dataView = context.Data.LoadFromTextFile<GitHubIssue>(filename, hasHeader: true);
+
+            TextLoader loader = context.Data.CreateTextLoader(new[]
+            {
+                new TextLoader.Column("ID", DataKind.String, 0),
+                new TextLoader.Column("Area", DataKind.String, 1),
+                new TextLoader.Column("Title", DataKind.String, 2),
+                new TextLoader.Column("Description", DataKind.String, 3),
+
+            },
+            hasHeader: true
+            );
+
+            
+
+            IDataView dataView = loader.Load(filename);
+
 
             var preview = dataView.Preview();
 
@@ -80,15 +96,23 @@ namespace GitHubIssues
 
     public class GitHubIssue
     {
-        [LoadColumn(0)]
         public string ID { get; set; }
-        [LoadColumn(1)] 
         public string Area { get; set; }
-        [LoadColumn(2)] 
         public string Title { get; set; }
-        [LoadColumn(3)] 
         public string Description { get; set; }
     }
+
+    //public class GitHubIssue
+    //{
+    //    [LoadColumn(0)]
+    //    public string ID { get; set; }
+    //    [LoadColumn(1)]
+    //    public string Area { get; set; }
+    //    [LoadColumn(2)]
+    //    public string Title { get; set; }
+    //    [LoadColumn(3)]
+    //    public string Description { get; set; }
+    //}
 
     public class IssuePrediction
     {
