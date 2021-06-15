@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextSentimentAnalysisWebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSSDefender.WebApp", "XSSDefender.WebApp\XSSDefender.WebApp.csproj", "{E882B495-BBA7-4626-B590-5F21F14918E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiClassClassification", "MultiClassClassification", "{F7D5CFCB-813D-497F-B11E-E398E6EBD015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIssues", "GitHubIssues\GitHubIssues.csproj", "{1ECCB429-B995-455B-A31F-32A1875CE589}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{E882B495-BBA7-4626-B590-5F21F14918E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E882B495-BBA7-4626-B590-5F21F14918E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E882B495-BBA7-4626-B590-5F21F14918E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECCB429-B995-455B-A31F-32A1875CE589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECCB429-B995-455B-A31F-32A1875CE589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECCB429-B995-455B-A31F-32A1875CE589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECCB429-B995-455B-A31F-32A1875CE589}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{4C008610-ED80-41E4-8010-671B52A9D5F3} = {9E14A1B2-D843-4BF5-B10E-ACECB9632F43}
 		{1F22C5FC-1496-458A-B878-9AF1B2DDA8E5} = {9E14A1B2-D843-4BF5-B10E-ACECB9632F43}
 		{E882B495-BBA7-4626-B590-5F21F14918E7} = {9E14A1B2-D843-4BF5-B10E-ACECB9632F43}
+		{1ECCB429-B995-455B-A31F-32A1875CE589} = {F7D5CFCB-813D-497F-B11E-E398E6EBD015}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8828262C-07CB-4EFE-A3DF-2188D95E2043}
