@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forecasting", "Forecasting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Predicate", "Covid19Predicate\Covid19Predicate.csproj", "{7268390B-D41D-4B38-A107-3BC1003B1D12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinAnomalyDetection", "BitcoinAnomalyDetection\BitcoinAnomalyDetection.csproj", "{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{7268390B-D41D-4B38-A107-3BC1003B1D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7268390B-D41D-4B38-A107-3BC1003B1D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7268390B-D41D-4B38-A107-3BC1003B1D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{8E98FC64-8D29-4E0F-8875-835B676B425A} = {B3E37D2F-C3DD-4101-9E9D-E3FA7429CEBA}
 		{3A27DD69-9C8D-4F47-BFB4-87F37B510E88} = {C80032C9-A030-4BB7-98F5-DFEEEAAAF28A}
 		{7268390B-D41D-4B38-A107-3BC1003B1D12} = {E2EF8592-CF3A-4D8C-9310-4AFE107709EB}
+		{D12A4EF3-BAC3-4724-8853-1A949E1A4D66} = {E2EF8592-CF3A-4D8C-9310-4AFE107709EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8828262C-07CB-4EFE-A3DF-2188D95E2043}
