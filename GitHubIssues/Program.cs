@@ -51,9 +51,7 @@ namespace GitHubIssues
             var featurizedDescription = context.Transforms.Text.FeaturizeText(inputColumnName: nameof(GitHubIssue.Description), outputColumnName: "DescriptionFeaturized");
 
             var features = context.Transforms.Concatenate(outputColumnName: "Features", inputColumnNames: new string[] { "TitleFeaturized", "DescriptionFeaturized" });
-            pipeline.Append(featurizedTitle);
-            pipeline.Append(featurizedDescription);
-            pipeline.Append(features);
+          
 
             // 4. Algorithm
 
@@ -67,7 +65,15 @@ namespace GitHubIssues
             pipeline.Append(mapKeyToValue);
 
             // 5. Train model
-            var trainedModel = pipeline.Fit(dataView);
+
+            var trainPipeline = pipeline
+                .Append(featurizedTitle)
+                .Append(featurizedDescription)
+                .Append(features)                
+                .Append(trainer)
+                .Append(mapKeyToValue);
+
+            var trainedModel = trainPipeline.Fit(dataView);
 
             // 6. Evaluate model
             //var metrics = context.MulticlassClassification.Evaluate(trainedModel.Transform(dataView));

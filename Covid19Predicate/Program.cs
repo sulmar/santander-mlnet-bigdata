@@ -47,7 +47,6 @@ namespace Covid19Predicate
             // 5. Train model
             var trainedModel = pipeline.Fit(filteredDataView);
 
-
             // 6. Metrics
 
             // 7. Predict model
