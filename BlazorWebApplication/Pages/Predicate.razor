@@ -1,0 +1,24 @@
+﻿@page "/Predicate"
+@using BlazorWebApplication
+@using Microsoft.Extensions.ML
+
+@inject PredictionEnginePool<SentimentInput, SentimentPrediction> engine;
+
+<h3>predicate</h3>
+
+
+<input type="text" name="comment" />
+
+<input type="button" value="Predicate" @onclick="OnPredicate" />
+
+
+
+
+@code {
+
+    private void OnPredicate()
+    {
+        
+    }
+
+}
