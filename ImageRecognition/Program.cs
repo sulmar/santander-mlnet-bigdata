@@ -26,7 +26,7 @@ namespace ImageRecognition
         {
             
 
-            string filename = @"C:\Users\marci\OneDrive\Obrazy\branding-car-on-the-street-mockup_77323-37.jpg";
+            string filename = @"C:\Users\marci\OneDrive\Obrazy\apple-1239300_1280.jpg";
 
             // Context
             var context = new MLContext();
