@@ -10,7 +10,12 @@ Przykłady ze szkolenia ML.NET i BigData
 docker build .
 ~~~
 
-2. 
+2. Uruchomienie środowiska
 ~~~
-docker compose-up
+docker-compose up
+~~~
+
+3. Usunięcie środowiska
+~~~
+docker-compose down
 ~~~
