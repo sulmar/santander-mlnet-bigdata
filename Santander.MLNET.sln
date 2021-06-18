@@ -35,21 +35,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Predicate", "Covid19
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinAnomalyDetection", "BitcoinAnomalyDetection\BitcoinAnomalyDetection.csproj", "{D12A4EF3-BAC3-4724-8853-1A949E1A4D66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageRecognition", "ImageRecognition\ImageRecognition.csproj", "{248707CB-B1AD-43D2-9047-307E43355E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageRecognition", "ImageRecognition\ImageRecognition.csproj", "{248707CB-B1AD-43D2-9047-307E43355E83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Charts", "Charts", "{81EEB5C2-04A4-4D66-B927-3D94099AFB25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartDemo", "ChartDemo\ChartDemo.csproj", "{A8913806-89CB-45F4-A7F4-DE7CA20B6D58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartDemo", "ChartDemo\ChartDemo.csproj", "{A8913806-89CB-45F4-A7F4-DE7CA20B6D58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recommendation", "Recommendation", "{DA7554C8-4504-4646-AE36-F6914BFC8147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRecommendation", "MovieRecommendation\MovieRecommendation.csproj", "{A6F981D5-16E7-4394-B858-A1FC299D69F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRecommendation", "MovieRecommendation\MovieRecommendation.csproj", "{A6F981D5-16E7-4394-B858-A1FC299D69F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoML", "AutoML", "{C24A6AD2-8321-4975-91BD-8328CD74031E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceHousePredicate", "PriceHousePredicate\PriceHousePredicate.csproj", "{DD97F6DA-E171-4121-AEA0-F81D063096EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriceHousePredicate", "PriceHousePredicate\PriceHousePredicate.csproj", "{DD97F6DA-E171-4121-AEA0-F81D063096EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebApplication", "BlazorWebApplication\BlazorWebApplication.csproj", "{8E05D737-3B35-4490-8FE6-ACC684D9B23C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebApplication", "BlazorWebApplication\BlazorWebApplication.csproj", "{8E05D737-3B35-4490-8FE6-ACC684D9B23C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MLFlow", "MLFlow", "{0C7FFF1B-1E0D-4F79-A55E-14FDEF28E0FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLFlowConsoleClient", "MLFlowConsoleClient\MLFlowConsoleClient.csproj", "{6C187261-8975-4A2C-8E34-9DF0147FB186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +125,10 @@ Global
 		{8E05D737-3B35-4490-8FE6-ACC684D9B23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E05D737-3B35-4490-8FE6-ACC684D9B23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E05D737-3B35-4490-8FE6-ACC684D9B23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C187261-8975-4A2C-8E34-9DF0147FB186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C187261-8975-4A2C-8E34-9DF0147FB186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C187261-8975-4A2C-8E34-9DF0147FB186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C187261-8975-4A2C-8E34-9DF0147FB186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -139,6 +147,7 @@ Global
 		{A8913806-89CB-45F4-A7F4-DE7CA20B6D58} = {81EEB5C2-04A4-4D66-B927-3D94099AFB25}
 		{A6F981D5-16E7-4394-B858-A1FC299D69F3} = {DA7554C8-4504-4646-AE36-F6914BFC8147}
 		{DD97F6DA-E171-4121-AEA0-F81D063096EA} = {C24A6AD2-8321-4975-91BD-8328CD74031E}
+		{6C187261-8975-4A2C-8E34-9DF0147FB186} = {0C7FFF1B-1E0D-4F79-A55E-14FDEF28E0FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8828262C-07CB-4EFE-A3DF-2188D95E2043}
