@@ -21,10 +21,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TextTransformations", "Text
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextTransformationConsoleClient", "TextTransformationConsoleClient\TextTransformationConsoleClient.csproj", "{8E98FC64-8D29-4E0F-8875-835B676B425A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubIsusses_ConsoleApp", "GitHubIsusses_ConsoleApp\GitHubIsusses_ConsoleApp.csproj", "{8F4A0F64-848D-46AA-9839-BB58B14A3A05}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubIssues_WebApi", "GitHubIssues_WebApi\GitHubIssues_WebApi.csproj", "{766450D8-CB02-46C4-A260-140D217531A9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regression", "Regression", "{C80032C9-A030-4BB7-98F5-DFEEEAAAF28A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PredicatePriceHouses", "PredicatePriceHouses\PredicatePriceHouses.csproj", "{3A27DD69-9C8D-4F47-BFB4-87F37B510E88}"
@@ -85,14 +81,6 @@ Global
 		{8E98FC64-8D29-4E0F-8875-835B676B425A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E98FC64-8D29-4E0F-8875-835B676B425A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E98FC64-8D29-4E0F-8875-835B676B425A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F4A0F64-848D-46AA-9839-BB58B14A3A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F4A0F64-848D-46AA-9839-BB58B14A3A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F4A0F64-848D-46AA-9839-BB58B14A3A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F4A0F64-848D-46AA-9839-BB58B14A3A05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{766450D8-CB02-46C4-A260-140D217531A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{766450D8-CB02-46C4-A260-140D217531A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{766450D8-CB02-46C4-A260-140D217531A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{766450D8-CB02-46C4-A260-140D217531A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A27DD69-9C8D-4F47-BFB4-87F37B510E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A27DD69-9C8D-4F47-BFB4-87F37B510E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A27DD69-9C8D-4F47-BFB4-87F37B510E88}.Release|Any CPU.ActiveCfg = Release|Any CPU

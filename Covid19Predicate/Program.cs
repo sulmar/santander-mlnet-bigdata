@@ -47,7 +47,10 @@ namespace Covid19Predicate
             // 5. Train model
             var trainedModel = pipeline.Fit(filteredDataView);
 
-            // 6. Metrics
+            // 6. Save model
+            context.Model.Save(trainedModel, dataView.Schema, "covid19-model.zip");
+
+            
 
             // 7. Predict model
 

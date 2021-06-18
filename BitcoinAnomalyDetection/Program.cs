@@ -112,6 +112,7 @@ namespace BitcoinAnomalyDetection
         [LoadColumn(6)]
         public float MarketCap { get; set; }
 
+
     }
 
     public class SpikeAnomaly

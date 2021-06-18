@@ -1,0 +1,15 @@
+﻿{
+  "TrainingConfigurationVersion": 0,
+  "TrainingTime": 300,
+  "Scenario": {
+    "ScenarioType": "ObjectDetection"
+  },
+  "DataSource": {
+    "DataSourceType": "Vott"
+  },
+  "Environment": {
+    "EnvironmentType": "Azure",
+    "SubscriptionID": "00000000-0000-0000-0000-000000000000",
+    "ExperimentName": "Objectdetection"
+  }
+}
