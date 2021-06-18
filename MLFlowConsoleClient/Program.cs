@@ -12,6 +12,9 @@ namespace MLFlowConsoleClient
 {
     class Program
     {
+        // lista eksperymentów poprzez API
+        // http://localhost:5000/api/2.0/preview/mlflow/experiments/list
+
         static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
