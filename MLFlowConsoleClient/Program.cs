@@ -15,6 +15,7 @@ namespace MLFlowConsoleClient
         // lista eksperymentów poprzez API
         // http://localhost:5000/api/2.0/preview/mlflow/experiments/list
 
+        // dotnet add package MLFlow.NET --version 1.0.0-CI-20181206-054144
         static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -47,8 +48,12 @@ namespace MLFlowConsoleClient
 
             var runUuid = runResult.Run.Info.RunUuid;
 
-            var logResultMetric = await flowService
-              .LogMetric(runUuid, "Foo", 2345);
+            //var logResultMetric = await flowService
+            //  .LogMetric(runUuid, "Foo", 2345);
+
+
+            var logResultMetricBoo = await flowService
+              .LogMetric(runUuid, "Boo", 1.04f);
 
         }
 
