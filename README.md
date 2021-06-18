@@ -19,3 +19,11 @@ docker-compose up
 ~~~
 docker-compose down
 ~~~
+
+
+# Dodatkowe materiały
+
+- Odkrywanie właściwości sieci neuronowych
+http://otworzksiazke.pl/images/ksiazki/odkrywanie_wlasciwosci_sieci_neuronowych/odkrywanie_wlasciwosci_sieci_neuronowych.pdf
+
+
