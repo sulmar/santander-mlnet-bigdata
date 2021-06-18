@@ -1,24 +1,30 @@
-﻿using Microsoft.ML;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.ML;
 using Microsoft.ML.AutoML;
 using Microsoft.ML.Data;
+using MLFlow.NET.Lib;
+using MLFlow.NET.Lib.Contract;
+using MLFlow.NET.Lib.Model;
+using MLFlow.NET.Lib.Model.Responses.Run;
 using System;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Threading;
-
+using System.Threading.Tasks;
 
 namespace PriceHousePredicate
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
             // OnnxSaveTest();
 
-            TrainModel();
+            await TrainModel();
         }
 
         private static void OnnxSaveTest()
@@ -40,7 +46,7 @@ namespace PriceHousePredicate
 
         // dotnet add package Microsoft.ML.AutoML
 
-        private static void TrainModel()
+        private static async Task TrainModel()
         {
             const string filename = "./extract/Houses.csv";
 
@@ -74,8 +80,36 @@ namespace PriceHousePredicate
 
             var experiment = context.Auto().CreateRegressionExperiment(experimentSettings);
 
-            IProgress<RunDetail<RegressionMetrics>> progress = 
-                new Progress<RunDetail<RegressionMetrics>>(d => Console.WriteLine($"{d.TrainerName} R^2 {d.ValidationMetrics?.RSquared} {d.RuntimeInSeconds} s"));
+            var services = _bootApp();
+
+            var flowService = services.GetService<IMLFlowService>();
+
+            var response = await flowService.GetOrCreateExperiment("Experiment-MLNET-MLFlow");
+
+            
+           //  var response = await flowService.CreateExperiment("Experiment-MLNET4");
+            var experimentId = response.ExperimentId;
+
+            var createRunRequest = new CreateRunRequest()
+            {
+                ExperimentId = experimentId,
+                UserId = Environment.UserName,
+                SourceType = SourceType.NOTEBOOK,
+                SourceName = "String descriptor for the run’s source",
+                EntryPointName = "Name of the project entry point associated with the current run, if any.",
+                StartTime = ((DateTimeOffset)DateTime.UtcNow).ToUnixTimeMilliseconds() //unix timestamp
+            };
+
+            var runResult = await flowService.CreateRun(createRunRequest);
+
+            var runUuid = runResult.Run.Info.RunUuid;
+
+
+            //IProgress<RunDetail<RegressionMetrics>> progress = 
+            //    new Progress<RunDetail<RegressionMetrics>>(d => Console.WriteLine($"{d.TrainerName} R^2 {d.ValidationMetrics?.RSquared} {d.RuntimeInSeconds} s"));
+
+
+            var progress = new FlowMLProgress(flowService, runUuid);
 
             Console.WriteLine("Starting experiment. Press Ctrl+C to cancel.");
 
@@ -89,9 +123,13 @@ namespace PriceHousePredicate
 
             context.Model.Save(trainedModel, null, $"{result.BestRun.TrainerName}-model.zip");
 
+            return;
+
             var details = result.RunDetails
                 .OrderByDescending(m => m.ValidationMetrics.RSquared)
                 .Take(3);
+
+
 
             foreach (var detail in details)
             {
@@ -105,6 +143,27 @@ namespace PriceHousePredicate
 
             }
 
+        }
+
+
+        static IServiceProvider _bootApp()
+        {
+            var builder = new ConfigurationBuilder();
+            // tell the builder to look for the appsettings.json file
+            builder.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+            var configuration = builder.Build();
+
+            var serviceCollection = new ServiceCollection();
+
+            serviceCollection.AddMFlowNet();
+
+            serviceCollection.Configure<MLFlowConfiguration>(
+                configuration.GetSection(nameof(MLFlowConfiguration)
+                ));
+
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            return serviceProvider;
         }
     }
 
@@ -134,4 +193,6 @@ namespace PriceHousePredicate
         public float Year { get; set; }
 
     }
+
+   
 }
